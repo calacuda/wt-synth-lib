@@ -18,8 +18,8 @@ pub struct WavetableOscillator {
 }
 
 impl WavetableOscillator {
-    pub fn new(sample_rate: u32, overtones: [Option<Overtone>; 10]) -> WavetableOscillator {
-        WavetableOscillator {
+    pub fn new(sample_rate: u32, overtones: [Option<Overtone>; 10]) -> Self {
+        Self {
             sample_rate,
             wave_table: Self::build_wave_table(overtones),
             index: 0.0,
